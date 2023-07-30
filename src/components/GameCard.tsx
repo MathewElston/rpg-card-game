@@ -1,11 +1,15 @@
 import {
   Box,
   Button,
+  ButtonGroup,
   Card,
   CardBody,
   Divider,
+  Grid,
   HStack,
   Image,
+  Progress,
+  Stack,
   Text,
   useColorMode,
 } from "@chakra-ui/react";
@@ -14,29 +18,30 @@ const GameCard = () => {
   return (
     <Card textColor="orange.400" height="400px" width="200px" borderRadius={5}>
       <CardBody>
-        <Image
-          width="100%"
-          overflow="hidden"
-          src={darkKnight}
-          borderRadius={20}
-        />
-        <Divider marginTop={2} borderColor="white" />
-        <HStack justifyContent={"space-between"}>
-          <Text>Name</Text>
-          <Text>-</Text>
-          <Text>Type</Text>
-        </HStack>
-        <Divider marginTop={2} borderColor="white" />
-        <Box>
-          <HStack>
+        <Stack spacing={2}>
+        <HStack justifyContent="space-between">
+            <Text>Name</Text>
+            <Text>Type</Text>
+          </HStack>
+          <Image
+            width="100%"
+            overflow="hidden"
+            src={darkKnight}
+            borderRadius={20}
+          />
+          <Divider borderColor="white" />
+          <HStack flex="0" justifyContent="space-between">
+            <Text> Health </Text>
+            <Text> Mana </Text>
+          </HStack>
+          <Grid templateColumns="repeat(2, 1fr)" gap={2}>
             <Button>Attack</Button>
             <Button>Abilities</Button>
-          </HStack>
-          <HStack>
             <Button>Defend</Button>
             <Button>Item</Button>
-          </HStack>
-        </Box>
+          </Grid>
+          <Progress value={50} borderRadius={20}> </Progress>
+        </Stack>
       </CardBody>
     </Card>
   );
