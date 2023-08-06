@@ -69,7 +69,6 @@ function App() {
   return (
     <>
       <GameBoard player={player} enemyList={enemyList} />
-      <Button className="hover-animation"></Button>
     </>
   );
 }
