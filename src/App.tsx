@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import "./App.css";
-import GameCard from "./components/GameCard";
+import GameCard from "./components/PlayerCard";
 import { Button, Grid, GridItem } from "@chakra-ui/react";
 import { Character } from "./Character";
 import AttackMenu from "./components/AttackMenu";
 import GameBoard from "./components/GameBoard";
 import PlayerField from "./components/PlayerField";
+import "./App.css";
 
 function App() {
   const [player, setPlayer] = useState<Character>({
