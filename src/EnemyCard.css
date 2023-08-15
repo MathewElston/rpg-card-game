@@ -1,0 +1,13 @@
+.hover-animation {
+    animation-name: floating;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes floating {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
+  }
+  
